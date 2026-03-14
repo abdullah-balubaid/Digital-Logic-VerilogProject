@@ -1,0 +1,15 @@
+module mux2to1(
+	input S, A0, A1
+	output y
+);
+
+
+wire sel0, sel1;
+
+
+and S0(sel0, ~S, A0);
+and S1(sel1, S, A1);
+or (y, sel0, sel1);
+
+endmodule
+

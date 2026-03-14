@@ -1,0 +1,29 @@
+module twos_comp(
+	input[12:0] A,
+	output[12:0] B
+
+);
+
+
+// 1's Complement Process
+wire [12:0] ones_comp;
+wire [12:1] C;
+not not_A[12:0](ones_comp, A);
+
+
+// 2's Complement Process
+half_adder HA0(ones_comp[0],1'b1,B[0],C[1]);
+half_adder HA1(ones_comp[1],C[1],B[1],C[2]);
+half_adder HA2(ones_comp[2],C[2],B[2],C[3]);
+half_adder HA3(ones_comp[3],C[3],B[3],C[4]);
+half_adder HA4(ones_comp[4],C[4],B[4],C[5]);
+half_adder HA5(ones_comp[5],C[5],B[5],C[6]);
+half_adder HA6(ones_comp[6],C[6],B[6],C[7]);
+half_adder HA7(ones_comp[7],C[7],B[7],C[8]);
+half_adder HA8(ones_comp[8],C[8],B[8],C[9]);
+half_adder HA9(ones_comp[9],C[9],B[9],C[10]);
+half_adder HA10(ones_comp[10],C[10],B[10],C[11]);
+half_adder HA11(ones_comp[11],C[11],B[11],C[12]);
+half_adder HA12(ones_comp[12],C[12],B[12],cout);
+
+endmodule 

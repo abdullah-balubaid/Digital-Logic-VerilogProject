@@ -1,0 +1,13 @@
+waveform ---> half_adder
+waveform1 ---> full_adder
+waveform2 ---> four_bit_adder
+waveform3 ---> eight_bit_adder
+waveform4 ---> thirteen_bit_adder
+waveform5 ---> mul4in4
+waveform6 ---> mul4in8
+waveform7 ---> mux2to1
+waveform8 ---> twos_comp
+waveform9 ---> sign_selection
+waveform10 ---> overflow_checker
+waveform11 ---> full_circuit
+waveform12 ---> multiplier4in4_alternative 

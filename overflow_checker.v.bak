@@ -1,0 +1,16 @@
+module overflow_checker(
+	input Sa,Sb,Sc;
+	output overflow;
+
+);
+
+wire not_Sa, not_Sb, not_Sc;
+not (not_Sa, Sa);
+not (not_Sb, Sa);
+not (not_Sc, Sa);
+
+and(S1,not_Sa,not_Sb,Sc);
+and(S2,Sa,Sb,not_Sc);
+or(overflow,S1,S2);
+
+endmodule

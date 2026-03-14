@@ -1,0 +1,15 @@
+module full_adder(
+	input A,
+	input B,
+	input Cin,
+	
+	output sum,
+	output Cout
+
+);
+
+
+xor s(sum, A,B,Cin);
+or c(Cout,A&B, A&Cin, B&Cin);
+
+endmodule 
